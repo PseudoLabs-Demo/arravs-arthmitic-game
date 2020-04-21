@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Arthimitic Game</string>
+    <string name="Zero">0</string>
 </resources>
