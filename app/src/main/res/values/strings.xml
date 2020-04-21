@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Arthimitic Game</string>
     <string name="Zero">0</string>
+    <string name="One">1</string>
+    <string name="Two">2</string>
+    <string name="Three">3</string>
+    <string name="done_button_text">Done</string>
 </resources>
