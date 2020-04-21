@@ -1,0 +1,2 @@
+rootProject.name='Arthimitic Game'
+include ':app'
