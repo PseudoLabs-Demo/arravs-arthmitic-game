@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-//        setContentView(R.layout.activity_main)
+        // This initialises the options as clickable.
         setListeners()
 
         binding.doneButton.setOnClickListener{
@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     {
 //         These are all the views that are subject to change in the program.
         val clickableViews: List<View> = listOf(option_one, option_two, option_three, option_four)
+        // Go through the options to check which one has been clicked.
         for (item in clickableViews)
         {
             item.setOnClickListener{ get_val(it) }
@@ -49,10 +50,12 @@ class MainActivity : AppCompatActivity() {
         // This means that two numbers have been selected.
 
         println("In the check ans function")
+        // Store the values as I'm not allowed to directly add two attributes(?)
         value_one = sum.first
         value_two = sum.second
         println("Value_one: $value_one \nValue_two: $value_two")
 
+        // If the user has already clicked twice or more then you can add the two numbers.
         if (clickCounter == 2)
         {
             println("This is value one $value_one")
@@ -65,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     private fun get_val(view: View)
     {
 
+        // Reset the numbers when the click counter is 0
         if (clickCounter == 2)
         {
             sum.first = 0
@@ -72,9 +76,9 @@ class MainActivity : AppCompatActivity() {
             clickCounter = 0
         }
 
+        // Get and store the value of the option box clicked
         var temp :Int? = null
         var pseudoVal: TextView = findViewById(view.id)
-        //binding.doneButton.text = pseudoVal.text.toString()
         // This will get the id of the button that is clicked.
         temp = findViewById<TextView>(view.id).text.toString().toInt()
 
